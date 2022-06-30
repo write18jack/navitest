@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.navitest.R
 import com.example.navitest.databinding.FragmentSlideshowBinding
 
@@ -36,6 +37,10 @@ class SlideshowFragment : Fragment() {
             textView.text = it
         })
         return root
+    }
+
+    fun goToNextScreen(){
+        findNavController().navigate(R.id.action_nav_slideshow_to_slideshowFragment2)
     }
 
     override fun onDestroyView() {

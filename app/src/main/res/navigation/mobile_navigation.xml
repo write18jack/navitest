@@ -19,11 +19,7 @@
         android:id="@+id/homeFragment2"
         android:name="com.example.navitest.ui.home.HomeFragment2"
         android:label="@string/menu_home2"
-        tools:layout="@layout/fragment_home2" >
-        <action
-            android:id="@+id/action_homeFragment2_to_nav_home"
-            app:destination="@id/nav_home" />
-    </fragment>
+        tools:layout="@layout/fragment_home2" />
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -35,6 +31,15 @@
         android:id="@+id/nav_slideshow"
         android:name="com.example.navitest.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_slideshowFragment2"
+            app:destination="@id/slideshowFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/slideshowFragment2"
+        android:name="com.example.navitest.ui.slideshow.SlideshowFragment2"
+        android:label="fragment_slideshow2"
+        tools:layout="@layout/fragment_slideshow2" />
 
 </navigation>

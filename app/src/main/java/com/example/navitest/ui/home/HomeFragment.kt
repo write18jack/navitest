@@ -34,10 +34,15 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         val imageButton: ImageButton = binding.imagePos
-        homeViewModel.player.observe(viewLifecycleOwner, Observer {
+        homeViewModel.posi_image.observe(viewLifecycleOwner, Observer {
             imageButton.setBackgroundResource(it)
         })
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding?.homeFragment = this
     }
 
     fun goToNextScreen(){
