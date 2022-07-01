@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val imageButton: ImageButton = binding.imagePos
+        val imageButton: ImageButton = binding.lst
         homeViewModel.posi_image.observe(viewLifecycleOwner, Observer {
             imageButton.setBackgroundResource(it)
         })
@@ -46,6 +46,8 @@ class HomeFragment : Fragment() {
     }
 
     fun goToNextScreen(){
+
+
         findNavController().navigate(R.id.action_nav_home_to_homeFragment2)
     }
 

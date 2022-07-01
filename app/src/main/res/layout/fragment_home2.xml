@@ -29,7 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@{drawable/viewModel.felix}"/>
+            />
 
         <ImageButton
             android:id="@+id/griezmann"
@@ -40,7 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/felix"
-            android:background="@{drawable/viewModel.griezmann}"/>
+           />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

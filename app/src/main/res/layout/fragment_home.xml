@@ -22,7 +22,7 @@
         android:layout_height="match_parent">
 
         <ImageButton
-            android:id="@+id/image_pos"
+            android:id="@+id/lst"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="center"

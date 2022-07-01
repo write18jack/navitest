@@ -29,8 +29,8 @@ class HomeFragment2 : Fragment() {
         _binding = FragmentHome2Binding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val imageButton: ImageButton = binding.imagePlayer1
-        homeViewModel.player.observe(viewLifecycleOwner, Observer {
+        val imageButton: ImageButton = binding.griezmann
+        homeViewModel.griezmann.observe(viewLifecycleOwner, Observer {
             imageButton.setBackgroundResource(it)
         })
 
