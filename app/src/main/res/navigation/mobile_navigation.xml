@@ -19,7 +19,11 @@
         android:id="@+id/homeFragment2"
         android:name="com.example.navitest.ui.home.HomeFragment2"
         android:label="@string/menu_home2"
-        tools:layout="@layout/fragment_home2" />
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_homeFragment2_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
