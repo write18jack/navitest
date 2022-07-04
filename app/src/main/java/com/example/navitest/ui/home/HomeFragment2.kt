@@ -5,11 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResultListener
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.navitest.R
 import com.example.navitest.databinding.FragmentHome2Binding
@@ -22,7 +19,7 @@ class HomeFragment2 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val fragmentBinding = FragmentHome2Binding.inflate(inflater, container, false)
         binding = fragmentBinding
         // Inflate the layout for this fragment
@@ -34,9 +31,9 @@ class HomeFragment2 : Fragment() {
 
         setFragmentResultListener(
             "REQUEST_KEY"
-        ){key, bundle ->
-            val Id = bundle.getInt("KEY")
-            homeViewModel.setPosiId(Id)
+        ){_, bundle ->
+            val id = bundle.getInt("KEY")
+            homeViewModel.setPosiId(id)
         }
 
         binding?.apply {
@@ -44,8 +41,6 @@ class HomeFragment2 : Fragment() {
             viewModel = homeViewModel
             homeFragment2 = this@HomeFragment2
         }
-
-
     }
 
     fun backToHomeFragment(player:Int){

@@ -30,7 +30,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:PosiId="@{viewModel.user.posiId}"
+            app:PosiId="@{viewModel.user.iconId}"
             android:onClick="@{() -> homeFragment.goToNextScreen(1)}"
             />
 
@@ -44,7 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lst"
-            app:PosiId="@{viewModel.user.posiId}"
+            app:PosiId="@{viewModel.user.iconId}"
             android:onClick="@{() -> homeFragment.goToNextScreen(2)}"
             />
 
