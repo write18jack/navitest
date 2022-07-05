@@ -15,12 +15,11 @@
             type="com.example.navitest.ui.home.HomeFragment2" />
     </data>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <ImageButton
             android:id="@+id/felix"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -30,9 +29,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/felix"
-            android:onClick="@{() -> homeFragment2.backToHomeFragment(1)}" />
+            android:onClick="@{() -> homeFragment2.backToHomeFragment(1)}"
+            tools:ignore="ContentDescription" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <ImageButton
             android:id="@+id/griezmann"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -42,7 +42,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/felix"
             android:background="@drawable/griezmann"
-            android:onClick="@{() -> homeFragment2.backToHomeFragment(2)}" />
+            android:onClick="@{() -> homeFragment2.backToHomeFragment(2)}"
+            tools:ignore="ContentDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

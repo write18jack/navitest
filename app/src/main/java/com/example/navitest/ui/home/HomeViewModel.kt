@@ -1,5 +1,6 @@
 package com.example.navitest.ui.home
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -15,6 +16,7 @@ class HomeViewModel : ViewModel() {
 
     private val _posiId = MutableLiveData<Int>()
     fun setPosiId(pp: Int){
+        Log.d("TAG",  "id HomeViewModel: $pp")
         _posiId.value = pp
     }
     val posiId: LiveData<Int> = _posiId

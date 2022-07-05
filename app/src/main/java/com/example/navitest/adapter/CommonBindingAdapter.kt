@@ -7,7 +7,7 @@ import com.example.navitest.R
 object CommonBindingAdapter {
 
     @JvmStatic
-    @BindingAdapter("app:PosiId")
+    @BindingAdapter("app:iconId")
     fun setIconById(view: ImageButton, iconId: Int){
 
         val resourceId = when(iconId){

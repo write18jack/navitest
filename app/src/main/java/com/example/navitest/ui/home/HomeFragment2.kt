@@ -1,6 +1,7 @@
 package com.example.navitest.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +34,7 @@ class HomeFragment2 : Fragment() {
             "REQUEST_KEY"
         ){_, bundle ->
             val id = bundle.getInt("KEY")
+            Log.d("TAG",  "id HomeFragment2: $id")
             homeViewModel.setPosiId(id)
         }
 
