@@ -34,7 +34,7 @@ class HomeFragment2 : Fragment() {
             "REQUEST_KEY"
         ){_, bundle ->
             val id = bundle.getInt("KEY")
-            Log.d("TAG",  "id HomeFragment2: $id")
+            Log.d("TAG",  "HomeFragment2 id: $id")
             homeViewModel.setPosiId(id)
         }
 
@@ -48,12 +48,14 @@ class HomeFragment2 : Fragment() {
     fun backToHomeFragment(player:Int){
 
         homeViewModel.setUserId(player.toString())
+        Log.d("TAG", "HomeFragment2 player: $player")
 
         findNavController().navigate(R.id.action_homeFragment2_to_nav_home)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        Log.d("TAG","HomeFragment2 onDestroyView" )
         binding= null
     }
 

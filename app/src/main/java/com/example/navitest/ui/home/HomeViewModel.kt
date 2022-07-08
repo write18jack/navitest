@@ -16,15 +16,18 @@ class HomeViewModel : ViewModel() {
 
     private val _posiId = MutableLiveData<Int>()
     fun setPosiId(pp: Int){
-        Log.d("TAG",  "id HomeViewModel: $pp")
+        Log.d("TAG",  "HomeViewModel _posiId: $pp")
         _posiId.value = pp
     }
     val posiId: LiveData<Int> = _posiId
 
     private val _userId = MutableLiveData<String>()
     fun setUserId(item: String){
+        Log.d("TAG",  "HomeViewModel setUserId: $item")
         _userId.value = item
     }
+
+    //ex.A<Int> => B<String> switchMap: Int => LiveData<String>
     val user: LiveData<User> = Transformations.switchMap(_userId){ userId ->
         repository.getUser(userId)
     }

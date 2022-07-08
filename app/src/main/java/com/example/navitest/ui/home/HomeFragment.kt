@@ -1,6 +1,7 @@
 package com.example.navitest.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        Log.d("TAG", "HomeFragment onCreateView")
         val fragmentBinding = FragmentHomeBinding.inflate(inflater, container, false)
         binding = fragmentBinding
 
@@ -38,21 +40,26 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("TAG", "HomeFragment onViewCreated")
+
 
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = homeViewModel
             homeFragment = this@HomeFragment
         }
+        Log.d("TAG", "HomeFragment onViewCreated2")
     }
 
     fun goToNextScreen(position: Int){
 
         setFragmentResult("REQUEST_KEY", bundleOf("KEY" to position))
+        Log.d("TAG", "HomeFragment position: $position")
         findNavController().navigate(R.id.action_nav_home_to_homeFragment2)
     }
     override fun onDestroyView() {
         super.onDestroyView()
+        Log.d("TAG", "HomeFragment onDestroyView")
         binding = null
     }
 }

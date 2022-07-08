@@ -1,5 +1,6 @@
 package com.example.navitest.model
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.navitest.model.model.User
@@ -11,6 +12,7 @@ class LocalUserDataSource {
 
     init {
         val builder = UserBuilder()
+        Log.d("TAG", "LUDS: $builder")
 
         val user1 = builder.setId("1")
             .setIconId(1)
@@ -28,9 +30,9 @@ class LocalUserDataSource {
 
     fun getUser(userId: String): LiveData<User>{
         val user = userMap[userId] ?: UserBuilder().build()
+        Log.d("TAG","LUDS userId: $userId")
         return  MutableLiveData<User>().apply {
             postValue(user)
         }
     }
-
 }
