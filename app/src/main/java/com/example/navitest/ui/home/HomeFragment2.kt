@@ -49,8 +49,8 @@ class HomeFragment2 : Fragment() {
 
         homeViewModel.setUserId(player.toString())
         Log.d("TAG", "HomeFragment2 player: $player")
-
         findNavController().navigate(R.id.action_homeFragment2_to_nav_home)
+        homeViewModel.positionSelect()
     }
 
     override fun onDestroyView() {

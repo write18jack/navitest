@@ -30,9 +30,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:iconId="@{viewModel.user.iconId}"
+            app:iconId="@{viewModel.lst}"
             android:onClick="@{() -> homeFragment.goToNextScreen(1)}"
-            tools:ignore="ContentDescription" />
+            />
 
         <ImageButton
             android:id="@+id/rst"
@@ -44,9 +44,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lst"
-            app:iconId="@{viewModel.user.iconId}"
-            android:onClick="@{() -> homeFragment.goToNextScreen(2)}"
-            tools:ignore="ContentDescription" />
+            app:iconId="@{viewModel.rst}"
+            android:onClick="@{() -> homeFragment.goToNextScreen(2)}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
